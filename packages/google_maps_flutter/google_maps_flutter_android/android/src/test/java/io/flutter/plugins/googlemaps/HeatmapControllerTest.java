@@ -14,7 +14,6 @@ import org.junit.Test;
 import org.mockito.Mockito;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class HeatmapControllerTest {
@@ -27,7 +26,7 @@ public class HeatmapControllerTest {
         final TileOverlay tileOverlay = new TileOverlay(z);
         final HeatmapTileProvider heatmapTileProvider = spy(new HeatmapTileProvider.Builder().weightedData(list).build());
         final HeatmapController heatmapController = new HeatmapController(heatmapTileProvider, tileOverlay);
-        heatmapController.setRadius(20);
-        Mockito.verify(heatmapTileProvider).setRadius(20);
+        heatmapController.setRadius(30);
+        Mockito.verify(heatmapTileProvider).setRadius(30);
     }
 }
